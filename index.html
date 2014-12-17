@@ -13,13 +13,29 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<link href="tanstyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/prototype.js"></script>
-<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
-<script type="text/javascript" src="js/lightbox.js"></script>
-<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
-
-
+<script type="text/javascript">
+if(document.images)
+{
+  var image_array = new Array();
+	
+  // path to the directory with images
+  var path = 'http://www.creativejobscentral.com/content/wp-content/uploads/2014/11/architectural-jobs.jpg';
+  // enumeration of the "active" images
+  image_array[0] = path + "http://www.creativejobscentral.com/content/wp-content/uploads/2014/11/architectural-jobs.jpg";
+  image_array[1] = path + "http://www.creativejobscentral.com/content/wp-content/uploads/2014/11/architectural-jobs.jpg";
+  var preload_image = new Array ();
+ 
+  for(var i=0; i<image_array.length; i++)
+  {
+    preload_image[i]= new Image();
+    preload_image[i].src = image_array[i];
+  }
+}
+function rollover(name, "http://www.creativejobscentral.com/content/wp-content/uploads/2014/11/architectural-jobs.jpg")
+{
+  document.images[name].src = "http://www.creativejobscentral.com/content/wp-content/uploads/2014/11/architectural-jobs.jpg";
+}
+</script>
 
     <title>Architect by Stervern</title>
   </head>
